@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_QzpI8KF8EeilSdq-25aCvQ" name="SALT">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_Q4oWoKF8EeilSdq-25aCvQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Model" xmi:id="_Xtk1MKF8EeilSdq-25aCvQ" name="Structure"/>
+  <packagedElement xmi:type="uml:Model" xmi:id="_dlsfIKF8EeilSdq-25aCvQ" name="Behaviour">
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_Q0Yv0KF8EeilSdq-25aCvQ" name="SALT">
+      <region xmi:type="uml:Region" xmi:id="_Q0uHAKF8EeilSdq-25aCvQ" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_XnV4EKGBEeilSdq-25aCvQ" source="_U0LM4KGBEeilSdq-25aCvQ" target="_ECoiUKGBEeilSdq-25aCvQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_dmbFoKGBEeilSdq-25aCvQ" guard="_xxyWQKGCEeilSdq-25aCvQ" source="_ECoiUKGBEeilSdq-25aCvQ" target="_1jy6MKGAEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_xxyWQKGCEeilSdq-25aCvQ" name="modo">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_xxyWQaGCEeilSdq-25aCvQ" name="modo">
+              <language>C</language>
+              <body>modo = Limitado</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_dgTaEKGCEeilSdq-25aCvQ" event="_c805kKGCEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_H7vP8KGDEeilSdq-25aCvQ" guard="_H7vP8aGDEeilSdq-25aCvQ" source="_1jy6MKGAEeilSdq-25aCvQ" target="_ECoiUKGBEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_H7vP8aGDEeilSdq-25aCvQ" name="modo">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_H7vP8qGDEeilSdq-25aCvQ" name="modo">
+              <language>C</language>
+              <body>modo = Normal</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_H7vP86GDEeilSdq-25aCvQ" event="_c805kKGCEeilSdq-25aCvQ"/>
+        </transition>
+        <subvertex xmi:type="uml:State" xmi:id="_1jy6MKGAEeilSdq-25aCvQ" name="Habilitado">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_MVow8KGaEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>Activar receptor de comandos GPRS&#xD;
+Prender Led CT yFE</body>
+          </entry>
+          <exit xmi:type="uml:OpaqueBehavior" xmi:id="_O5migKGaEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>Desactivar receptor de comandos GPRS&#xD;
+Apagar Led CT y FE</body>
+          </exit>
+          <region xmi:type="uml:Region" xmi:id="__UCsQqGAEeilSdq-25aCvQ" name="Region1">
+            <transition xmi:type="uml:Transition" xmi:id="_E7ltIKGNEeilSdq-25aCvQ" source="_vsfoQKGDEeilSdq-25aCvQ" target="__8k1cKGMEeilSdq-25aCvQ"/>
+            <transition xmi:type="uml:Transition" xmi:id="_HQXMIKGNEeilSdq-25aCvQ" guard="_A443QKGOEeilSdq-25aCvQ" source="__8k1cKGMEeilSdq-25aCvQ" target="_M55PMKGHEeilSdq-25aCvQ">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_A443QKGOEeilSdq-25aCvQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_A443QaGOEeilSdq-25aCvQ">
+                  <language>C</language>
+                  <body>else</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_sZ0yEKGNEeilSdq-25aCvQ" guard="_7m1HwKGNEeilSdq-25aCvQ" source="__8k1cKGMEeilSdq-25aCvQ" target="_paujsKGNEeilSdq-25aCvQ">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_7m1HwKGNEeilSdq-25aCvQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_7m1HwaGNEeilSdq-25aCvQ">
+                  <language>C</language>
+                  <body>vel disponible</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_wSj-MKGNEeilSdq-25aCvQ" source="_M55PMKGHEeilSdq-25aCvQ" target="_paujsKGNEeilSdq-25aCvQ">
+              <trigger xmi:type="uml:Trigger" xmi:id="_sGqwEKGOEeilSdq-25aCvQ" name="evTimeoutFrenado" event="_r9wrsKGOEeilSdq-25aCvQ"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_vZQiMKGOEeilSdq-25aCvQ" guard="_Pss0YKGPEeilSdq-25aCvQ" source="_paujsKGNEeilSdq-25aCvQ" target="_vvz6oKGGEeilSdq-25aCvQ">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_Pss0YKGPEeilSdq-25aCvQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_Pss0YaGPEeilSdq-25aCvQ">
+                  <language>C</language>
+                  <body>else</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_yRhIwKGOEeilSdq-25aCvQ" guard="_u1IE8KGPEeilSdq-25aCvQ" source="_paujsKGNEeilSdq-25aCvQ" target="_PFDUoKGGEeilSdq-25aCvQ">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_u1IE8KGPEeilSdq-25aCvQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_u1IE8aGPEeilSdq-25aCvQ">
+                  <language>C</language>
+                  <body>comando remoto vigente</body>
+                </specification>
+              </ownedRule>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_0OQiQKGOEeilSdq-25aCvQ" source="_vvz6oKGGEeilSdq-25aCvQ" target="_PFDUoKGGEeilSdq-25aCvQ">
+              <trigger xmi:type="uml:Trigger" xmi:id="_LRYqMKGQEeilSdq-25aCvQ" name="evComandoRemoto" event="_LKcUsKGQEeilSdq-25aCvQ"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_3Zd6AKGOEeilSdq-25aCvQ" guard="_UrvSgKGVEeilSdq-25aCvQ" source="_PFDUoKGGEeilSdq-25aCvQ" target="_vvz6oKGGEeilSdq-25aCvQ">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_UrvSgKGVEeilSdq-25aCvQ">
+                <specification xmi:type="uml:OpaqueExpression" xmi:id="_UrvSgaGVEeilSdq-25aCvQ">
+                  <language>C</language>
+                  <body>comando = exit</body>
+                </specification>
+              </ownedRule>
+              <trigger xmi:type="uml:Trigger" xmi:id="_RcceQKGQEeilSdq-25aCvQ" name="evTimeoutComandoRemoto" event="_RSDzMKGQEeilSdq-25aCvQ"/>
+              <trigger xmi:type="uml:Trigger" xmi:id="_MAv4UKGVEeilSdq-25aCvQ" name="evComandoRemoto" event="_LKcUsKGQEeilSdq-25aCvQ"/>
+            </transition>
+            <transition xmi:type="uml:Transition" xmi:id="_0cRBsKGREeilSdq-25aCvQ" source="_0FRw8KGEEeilSdq-25aCvQ" target="_gGgCcKGREeilSdq-25aCvQ">
+              <trigger xmi:type="uml:Trigger" xmi:id="_wB4EkKGSEeilSdq-25aCvQ" event="_LKcUsKGQEeilSdq-25aCvQ"/>
+            </transition>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_vsfoQKGDEeilSdq-25aCvQ" name="Inicial"/>
+            <subvertex xmi:type="uml:State" xmi:id="_PFDUoKGGEeilSdq-25aCvQ" name="Modo Remoto">
+              <entry xmi:type="uml:OpaqueBehavior" xmi:id="_gVsQ0KGYEeilSdq-25aCvQ">
+                <language>C</language>
+                <body>Prender Led Op. Rem.</body>
+              </entry>
+              <exit xmi:type="uml:OpaqueBehavior" xmi:id="_c1oN8KGZEeilSdq-25aCvQ">
+                <language>C</language>
+                <body>Apagar Led Op. Rem.</body>
+              </exit>
+              <region xmi:type="uml:Region" xmi:id="_TTlxoKGGEeilSdq-25aCvQ" name="Region1">
+                <transition xmi:type="uml:Transition" xmi:id="_r33XsKGREeilSdq-25aCvQ" guard="_VHC10KGSEeilSdq-25aCvQ" source="_gGgCcKGREeilSdq-25aCvQ" target="_5t9l0KGGEeilSdq-25aCvQ">
+                  <ownedRule xmi:type="uml:Constraint" xmi:id="_VHC10KGSEeilSdq-25aCvQ">
+                    <specification xmi:type="uml:OpaqueExpression" xmi:id="_VHC10aGSEeilSdq-25aCvQ">
+                      <language>C</language>
+                      <body>comando modo intermitente</body>
+                    </specification>
+                  </ownedRule>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_sY95oKGREeilSdq-25aCvQ" guard="_QbcpYKGSEeilSdq-25aCvQ" source="_gGgCcKGREeilSdq-25aCvQ" target="_0FRw8KGEEeilSdq-25aCvQ">
+                  <ownedRule xmi:type="uml:Constraint" xmi:id="_QbcpYKGSEeilSdq-25aCvQ">
+                    <specification xmi:type="uml:OpaqueExpression" xmi:id="_QbcpYaGSEeilSdq-25aCvQ">
+                      <language>C</language>
+                      <body>comando coche a la deriva</body>
+                    </specification>
+                  </ownedRule>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_tmVEoKGREeilSdq-25aCvQ" guard="__-9o0KGREeilSdq-25aCvQ" source="_gGgCcKGREeilSdq-25aCvQ" target="_3vweoKGEEeilSdq-25aCvQ">
+                  <ownedRule xmi:type="uml:Constraint" xmi:id="__-9o0KGREeilSdq-25aCvQ">
+                    <specification xmi:type="uml:OpaqueExpression" xmi:id="__-9o0aGREeilSdq-25aCvQ">
+                      <language>C</language>
+                      <body>comando parada total</body>
+                    </specification>
+                  </ownedRule>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_uYm2IKGREeilSdq-25aCvQ" source="_3vweoKGEEeilSdq-25aCvQ" target="_gGgCcKGREeilSdq-25aCvQ">
+                  <trigger xmi:type="uml:Trigger" xmi:id="_uNsKIKGSEeilSdq-25aCvQ" name="evComandoRemoto" event="_LKcUsKGQEeilSdq-25aCvQ"/>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_Wr9lMKGSEeilSdq-25aCvQ" guard="_bvdUQKGSEeilSdq-25aCvQ" source="_gGgCcKGREeilSdq-25aCvQ" target="_mx5PUKGEEeilSdq-25aCvQ">
+                  <ownedRule xmi:type="uml:Constraint" xmi:id="_bvdUQKGSEeilSdq-25aCvQ">
+                    <specification xmi:type="uml:OpaqueExpression" xmi:id="_bvdUQaGSEeilSdq-25aCvQ">
+                      <language>C</language>
+                      <body>comando modo aislado total</body>
+                    </specification>
+                  </ownedRule>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_edscIKGSEeilSdq-25aCvQ" source="_mx5PUKGEEeilSdq-25aCvQ" target="_gGgCcKGREeilSdq-25aCvQ">
+                  <trigger xmi:type="uml:Trigger" xmi:id="_yrBREKGSEeilSdq-25aCvQ" event="_LKcUsKGQEeilSdq-25aCvQ"/>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_iXpJMKGSEeilSdq-25aCvQ" source="_5t9l0KGGEeilSdq-25aCvQ" target="_gGgCcKGREeilSdq-25aCvQ">
+                  <trigger xmi:type="uml:Trigger" xmi:id="_xh7iEKGSEeilSdq-25aCvQ" event="_LKcUsKGQEeilSdq-25aCvQ"/>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_k0pXIKGSEeilSdq-25aCvQ" source="_YV9eUKGREeilSdq-25aCvQ" target="_gGgCcKGREeilSdq-25aCvQ"/>
+                <subvertex xmi:type="uml:State" xmi:id="_3vweoKGEEeilSdq-25aCvQ" name="Parada Total">
+                  <entry xmi:type="uml:OpaqueBehavior" xmi:id="_vyr4YKGaEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Activar CT y FE</body>
+                  </entry>
+                  <exit xmi:type="uml:OpaqueBehavior" xmi:id="_1IZY0KGaEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Desactivar CT y FE</body>
+                  </exit>
+                </subvertex>
+                <subvertex xmi:type="uml:State" xmi:id="_0FRw8KGEEeilSdq-25aCvQ" name="Coche a la Deriva">
+                  <entry xmi:type="uml:OpaqueBehavior" xmi:id="_47774KGaEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Activar CT&#xD;
+Desactivar FE</body>
+                  </entry>
+                  <exit xmi:type="uml:OpaqueBehavior" xmi:id="_6p884KGaEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Desactivar CT</body>
+                  </exit>
+                </subvertex>
+                <subvertex xmi:type="uml:State" xmi:id="_mx5PUKGEEeilSdq-25aCvQ" name="Aislado Total">
+                  <entry xmi:type="uml:OpaqueBehavior" xmi:id="_EAVdcKGbEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Desactivar CT y FE</body>
+                  </entry>
+                </subvertex>
+                <subvertex xmi:type="uml:State" xmi:id="_5t9l0KGGEeilSdq-25aCvQ" name="Intermitente">
+                  <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_RU9VMKGbEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Ejecutar algoritmo de control intermitente</body>
+                  </doActivity>
+                </subvertex>
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_YV9eUKGREeilSdq-25aCvQ" name="Inicial"/>
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_gGgCcKGREeilSdq-25aCvQ" name="C3" kind="choice"/>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_vvz6oKGGEeilSdq-25aCvQ" name="Modo Automatico">
+              <entry xmi:type="uml:OpaqueBehavior" xmi:id="_cXQFUKGYEeilSdq-25aCvQ">
+                <language>C</language>
+                <body>Prender Led AL</body>
+              </entry>
+              <exit xmi:type="uml:OpaqueBehavior" xmi:id="_XU1e4KGZEeilSdq-25aCvQ">
+                <language>C</language>
+                <body>Apagar Led AL</body>
+              </exit>
+              <region xmi:type="uml:Region" xmi:id="_xvEcoaGGEeilSdq-25aCvQ" name="Region1">
+                <transition xmi:type="uml:Transition" xmi:id="_oEtroKGQEeilSdq-25aCvQ" source="_hieGoKGQEeilSdq-25aCvQ" target="_ik6bEKGQEeilSdq-25aCvQ"/>
+                <transition xmi:type="uml:Transition" xmi:id="_rsRBIKGQEeilSdq-25aCvQ" source="_ik6bEKGQEeilSdq-25aCvQ" target="_j-33oKGQEeilSdq-25aCvQ">
+                  <trigger xmi:type="uml:Trigger" xmi:id="_2jQ_4KGQEeilSdq-25aCvQ" name="evPerdidaVelocidad" event="_6t4mMKGQEeilSdq-25aCvQ"/>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_-V51wKGQEeilSdq-25aCvQ" source="_j-33oKGQEeilSdq-25aCvQ" target="_ik6bEKGQEeilSdq-25aCvQ">
+                  <trigger xmi:type="uml:Trigger" xmi:id="_DjXZIKGREeilSdq-25aCvQ" name="evVelocidadDisponible" event="_DccRwKGREeilSdq-25aCvQ"/>
+                </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_aaAxAKGiEeilSdq-25aCvQ" kind="internal" source="_ik6bEKGQEeilSdq-25aCvQ" target="_ik6bEKGQEeilSdq-25aCvQ">
+                  <effect xmi:type="uml:OpaqueBehavior" xmi:id="_oLpU4KGiEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Mostrar en display velocidad</body>
+                  </effect>
+                  <trigger xmi:type="uml:Trigger" xmi:id="_xbP4AKGiEeilSdq-25aCvQ" event="_DccRwKGREeilSdq-25aCvQ"/>
+                </transition>
+                <subvertex xmi:type="uml:Pseudostate" xmi:id="_hieGoKGQEeilSdq-25aCvQ" name="Inicial"/>
+                <subvertex xmi:type="uml:State" xmi:id="_ik6bEKGQEeilSdq-25aCvQ" name="Control Automatico">
+                  <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_qKU20KGcEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Ejecutar algortirmo de control basado en velocidad</body>
+                  </doActivity>
+                  <entry xmi:type="uml:OpaqueBehavior" xmi:id="_LkHC0KGZEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Prender display velocidad</body>
+                  </entry>
+                  <exit xmi:type="uml:OpaqueBehavior" xmi:id="_4oFoQKGZEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Apagar display velocidad</body>
+                  </exit>
+                </subvertex>
+                <subvertex xmi:type="uml:State" xmi:id="_j-33oKGQEeilSdq-25aCvQ" name="Control Intermitente">
+                  <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_UZe2IKGbEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Ejecutar algoritmo de control intermitente</body>
+                  </doActivity>
+                  <entry xmi:type="uml:OpaqueBehavior" xmi:id="__KVCsKGYEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Prender y Mostrar en display velocidad: &quot;----&quot;</body>
+                  </entry>
+                  <exit xmi:type="uml:OpaqueBehavior" xmi:id="_2GHawKGZEeilSdq-25aCvQ">
+                    <language>C</language>
+                    <body>Apagar display velocidad</body>
+                  </exit>
+                </subvertex>
+              </region>
+            </subvertex>
+            <subvertex xmi:type="uml:State" xmi:id="_M55PMKGHEeilSdq-25aCvQ" name="frenado preventivo">
+              <entry xmi:type="uml:OpaqueBehavior" xmi:id="_tYm4EKGZEeilSdq-25aCvQ">
+                <language>C</language>
+                <body>Activar CT y FE</body>
+              </entry>
+              <exit xmi:type="uml:OpaqueBehavior" xmi:id="_vwD3oKGZEeilSdq-25aCvQ">
+                <language>C</language>
+                <body>Desactivar CT y FE</body>
+              </exit>
+            </subvertex>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="__8k1cKGMEeilSdq-25aCvQ" name="C1" kind="choice"/>
+            <subvertex xmi:type="uml:Pseudostate" xmi:id="_paujsKGNEeilSdq-25aCvQ" name="C2" kind="choice"/>
+          </region>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_ECoiUKGBEeilSdq-25aCvQ" name="Deshabilitado">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_SHDdUKGXEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>Apagar display velocidad, Led AL, Led CT, Led FE, Led Op. Rem. y Buzzer&#xD;
+Prende Led Power</body>
+          </entry>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_U0LM4KGBEeilSdq-25aCvQ" name="Inicial"/>
+      </region>
+      <region xmi:type="uml:Region" xmi:id="_s3GCQKGgEeilSdq-25aCvQ" name="Region2">
+        <transition xmi:type="uml:Transition" xmi:id="_77rmUKGhEeilSdq-25aCvQ" source="_wXVO0KGgEeilSdq-25aCvQ" target="_hoRj8KGhEeilSdq-25aCvQ"/>
+        <transition xmi:type="uml:Transition" xmi:id="_hPiMcKGkEeilSdq-25aCvQ" source="_hoRj8KGhEeilSdq-25aCvQ" target="_BhxFEKGiEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_qWoT0KGkEeilSdq-25aCvQ" name="evTimeoutVelocidadHasler" event="_qH_a4KGkEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_wGO68KGkEeilSdq-25aCvQ" source="_hoRj8KGhEeilSdq-25aCvQ" target="_s34IkKGkEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_Izoo0KGlEeilSdq-25aCvQ" event="_mLdJUKGjEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_xSR3UKGkEeilSdq-25aCvQ" guard="_d4j0IKGlEeilSdq-25aCvQ" source="_s34IkKGkEeilSdq-25aCvQ" target="_hoRj8KGhEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_d4j0IKGlEeilSdq-25aCvQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_d4j0IaGlEeilSdq-25aCvQ">
+              <language>C</language>
+              <body>velocidad > 0</body>
+            </specification>
+          </ownedRule>
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_hEwqYKGlEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>GEN(evVelocidadDisponible)</body>
+          </effect>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_02jPUKGkEeilSdq-25aCvQ" guard="_Q9g6AKGlEeilSdq-25aCvQ" source="_s34IkKGkEeilSdq-25aCvQ" target="_BhxFEKGiEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_Q9g6AKGlEeilSdq-25aCvQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_Q9g6AaGlEeilSdq-25aCvQ">
+              <language>C</language>
+              <body>else</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_2QJDAKGlEeilSdq-25aCvQ" source="_BhxFEKGiEeilSdq-25aCvQ" target="_tRyA4KGlEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_8-hmkKGlEeilSdq-25aCvQ" name="evVelocidadExterna" event="_8ugNkKGlEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_ByhhEKGmEeilSdq-25aCvQ" guard="_GtMEQKGmEeilSdq-25aCvQ" source="_tRyA4KGlEeilSdq-25aCvQ" target="_BhxFEKGiEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_GtMEQKGmEeilSdq-25aCvQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_GtMEQaGmEeilSdq-25aCvQ">
+              <language>C</language>
+              <body>velocidad valida</body>
+            </specification>
+          </ownedRule>
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_JtU0cKGmEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>GEN(evVelocidadDisponible)</body>
+          </effect>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_MRwgEKGmEeilSdq-25aCvQ" source="_BhxFEKGiEeilSdq-25aCvQ" target="_DaKKEKGiEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_ZbgkkKGmEeilSdq-25aCvQ" name="evTimeoutVelocidadExterna" event="_ZNLNoKGmEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_NnNQEKGmEeilSdq-25aCvQ" guard="_QrcdIKGmEeilSdq-25aCvQ" source="_tRyA4KGlEeilSdq-25aCvQ" target="_DaKKEKGiEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_QrcdIKGmEeilSdq-25aCvQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_QrcdIaGmEeilSdq-25aCvQ">
+              <language>C</language>
+              <body>else</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_f4nK4KGmEeilSdq-25aCvQ" source="_DaKKEKGiEeilSdq-25aCvQ" target="_cpIXIKGmEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_ouveEKGmEeilSdq-25aCvQ" name="evVelocidadGPS" event="_oeNHsKGmEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_hUIGoKGmEeilSdq-25aCvQ" guard="_vVsj8KGmEeilSdq-25aCvQ" source="_cpIXIKGmEeilSdq-25aCvQ" target="_DaKKEKGiEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_vVsj8KGmEeilSdq-25aCvQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_vVsj8aGmEeilSdq-25aCvQ">
+              <language>C</language>
+              <body>velocidad valida</body>
+            </specification>
+          </ownedRule>
+          <effect xmi:type="uml:OpaqueBehavior" xmi:id="_xvhiEKGmEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>GEN(evVelocidadDisponible)</body>
+          </effect>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_zrh7wKGmEeilSdq-25aCvQ" source="_DaKKEKGiEeilSdq-25aCvQ" target="_4xHSUKGiEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_CTkjMKGnEeilSdq-25aCvQ" name="evTimeoutVelocidadGPS" event="_CG_fwKGnEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_DwM5QKGnEeilSdq-25aCvQ" guard="_HMs1UKGnEeilSdq-25aCvQ" source="_cpIXIKGmEeilSdq-25aCvQ" target="_4xHSUKGiEeilSdq-25aCvQ">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_HMs1UKGnEeilSdq-25aCvQ">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_HMs1UaGnEeilSdq-25aCvQ">
+              <language>C</language>
+              <body>else</body>
+            </specification>
+          </ownedRule>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_wewWYKGpEeilSdq-25aCvQ" source="_BhxFEKGiEeilSdq-25aCvQ" target="_hoRj8KGhEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_WXUeAKGqEeilSdq-25aCvQ" event="_mLdJUKGjEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_yAqOAKGpEeilSdq-25aCvQ" source="_DaKKEKGiEeilSdq-25aCvQ" target="_hoRj8KGhEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_TqlyAKGqEeilSdq-25aCvQ" event="_mLdJUKGjEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_ypcsUKGpEeilSdq-25aCvQ" source="_4xHSUKGiEeilSdq-25aCvQ" target="_hoRj8KGhEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_RA5L4KGqEeilSdq-25aCvQ" event="_mLdJUKGjEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_3P89YKGpEeilSdq-25aCvQ" source="_DaKKEKGiEeilSdq-25aCvQ" target="_BhxFEKGiEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_mcg_8KGqEeilSdq-25aCvQ" event="_8ugNkKGlEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_-GCrcKGpEeilSdq-25aCvQ" source="_4xHSUKGiEeilSdq-25aCvQ" target="_BhxFEKGiEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_jvL3AKGqEeilSdq-25aCvQ" event="_8ugNkKGlEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="__JCZgKGpEeilSdq-25aCvQ" source="_4xHSUKGiEeilSdq-25aCvQ" target="_DaKKEKGiEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_u_efgKGqEeilSdq-25aCvQ" event="_oeNHsKGmEeilSdq-25aCvQ"/>
+        </transition>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_wXVO0KGgEeilSdq-25aCvQ" name="Inicial"/>
+        <subvertex xmi:type="uml:State" xmi:id="_hoRj8KGhEeilSdq-25aCvQ" name="Velocidad Hasler"/>
+        <subvertex xmi:type="uml:State" xmi:id="_BhxFEKGiEeilSdq-25aCvQ" name="Velocidad externa"/>
+        <subvertex xmi:type="uml:State" xmi:id="_DaKKEKGiEeilSdq-25aCvQ" name="Velocidad GPS"/>
+        <subvertex xmi:type="uml:State" xmi:id="_4xHSUKGiEeilSdq-25aCvQ" name="Sin medicion velocidad"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_s34IkKGkEeilSdq-25aCvQ" name="C4" kind="choice"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_tRyA4KGlEeilSdq-25aCvQ" name="C5" kind="choice"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_cpIXIKGmEeilSdq-25aCvQ" name="C6" kind="choice"/>
+      </region>
+      <region xmi:type="uml:Region" xmi:id="_0hb58KGvEeilSdq-25aCvQ" name="Region4">
+        <transition xmi:type="uml:Transition" xmi:id="_yTp-UKGwEeilSdq-25aCvQ" source="_8LFy8KGvEeilSdq-25aCvQ" target="_8-5OcKGvEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_4wdpsKGwEeilSdq-25aCvQ" event="_oeNHsKGmEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_y4LnsKGwEeilSdq-25aCvQ" source="_8-5OcKGvEeilSdq-25aCvQ" target="_8LFy8KGvEeilSdq-25aCvQ">
+          <trigger xmi:type="uml:Trigger" xmi:id="_7ivkEKGwEeilSdq-25aCvQ" event="_CG_fwKGnEeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_zY5vIKGwEeilSdq-25aCvQ" source="_6_oscKGvEeilSdq-25aCvQ" target="_8LFy8KGvEeilSdq-25aCvQ"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_6_oscKGvEeilSdq-25aCvQ" name="Inicial"/>
+        <subvertex xmi:type="uml:State" xmi:id="_8LFy8KGvEeilSdq-25aCvQ" name="enlace GPS disponible">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_JDzKwKGwEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>Prender Led GPS</body>
+          </entry>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_8-5OcKGvEeilSdq-25aCvQ" name="enlace GPS no disponible">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_thFAIKGwEeilSdq-25aCvQ">
+            <language>C</language>
+            <body>Apagar Led GPS</body>
+          </entry>
+        </subvertex>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Model" xmi:id="_jcDRsKGAEeilSdq-25aCvQ" name="Event">
+      <packagedElement xmi:type="uml:Signal" xmi:id="_csAPUKGCEeilSdq-25aCvQ" name="evLlaveModo">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_csAPUaGCEeilSdq-25aCvQ" name="modo"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_c805kKGCEeilSdq-25aCvQ" name="evLlaveModo" signal="_csAPUKGCEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_r3jWAKGOEeilSdq-25aCvQ" name="evTimeoutFrenado"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_r9wrsKGOEeilSdq-25aCvQ" name="evTimeoutFrenado" signal="_r3jWAKGOEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_LDvPwKGQEeilSdq-25aCvQ" name="evComandoRemoto">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_eJBsUKGVEeilSdq-25aCvQ" name="comando"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_LKcUsKGQEeilSdq-25aCvQ" name="evComandoRemoto" signal="_LDvPwKGQEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_RL4SsKGQEeilSdq-25aCvQ" name="evTimeoutComandoRemoto"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_RSDzMKGQEeilSdq-25aCvQ" name="evTimeoutComandoRemoto" signal="_RL4SsKGQEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_6dQJMKGQEeilSdq-25aCvQ" name="evPerdidaVelocidad"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_6t4mMKGQEeilSdq-25aCvQ" name="evPerdidaVelocidad" signal="_6dQJMKGQEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_DSXvwKGREeilSdq-25aCvQ" name="evVelocidadDisponible">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rfx_IKGiEeilSdq-25aCvQ" name="velocidad"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_DccRwKGREeilSdq-25aCvQ" name="evVelocidadDisponible" signal="_DSXvwKGREeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_l9fl0KGjEeilSdq-25aCvQ" name="evVelocidadHasler">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_l9fl0aGjEeilSdq-25aCvQ" name="velocidad"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_mLdJUKGjEeilSdq-25aCvQ" name="evVelocidadHasler" signal="_l9fl0KGjEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_pUNNgKGkEeilSdq-25aCvQ" name="evTimeoutVelocidadHasler"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_qH_a4KGkEeilSdq-25aCvQ" name="evTimeoutVelocidadHasler" signal="_pUNNgKGkEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_7-_cMKGlEeilSdq-25aCvQ" name="evVelocidadExterna">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="__IwpgKGlEeilSdq-25aCvQ" name="velocidad"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_8ugNkKGlEeilSdq-25aCvQ" name="evVelocidadExterna" signal="_7-_cMKGlEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_Y_J_wKGmEeilSdq-25aCvQ" name="evTimeoutVelocidadExterna"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_ZNLNoKGmEeilSdq-25aCvQ" name="evTimeoutVelocidadExterna" signal="_Y_J_wKGmEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_oO8jsKGmEeilSdq-25aCvQ" name="evVelocidadGPS">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oO8jsaGmEeilSdq-25aCvQ" name="velocidad"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_oeNHsKGmEeilSdq-25aCvQ" name="evVelocidadGPS" signal="_oO8jsKGmEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_7Vf90KGmEeilSdq-25aCvQ" name="evTimeoutVelocidadGPS"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_CG_fwKGnEeilSdq-25aCvQ" name="evTimeoutVelocidadGPS" signal="_7Vf90KGmEeilSdq-25aCvQ"/>
+    </packagedElement>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_52e3YKGAEeilSdq-25aCvQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_52gFgKGAEeilSdq-25aCvQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
+</uml:Model>
