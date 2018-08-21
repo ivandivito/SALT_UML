@@ -170,12 +170,7 @@ Desactivar FE</body>
                     <body>Desactivar CT y FE</body>
                   </entry>
                 </subvertex>
-                <subvertex xmi:type="uml:State" xmi:id="_5t9l0KGGEeilSdq-25aCvQ" name="Intermitente">
-                  <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_RU9VMKGbEeilSdq-25aCvQ">
-                    <language>C</language>
-                    <body>Ejecutar algoritmo de control intermitente</body>
-                  </doActivity>
-                </subvertex>
+                <subvertex xmi:type="uml:State" xmi:id="_5t9l0KGGEeilSdq-25aCvQ" name="Intermitente" submachine="_xTX8oKVLEeicPOEdwV6QiA"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_YV9eUKGREeilSdq-25aCvQ" name="Inicial"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_gGgCcKGREeilSdq-25aCvQ" name="C3" kind="choice"/>
               </region>
@@ -190,7 +185,6 @@ Desactivar FE</body>
                 <body>Apagar Led AL</body>
               </exit>
               <region xmi:type="uml:Region" xmi:id="_xvEcoaGGEeilSdq-25aCvQ" name="Region1">
-                <transition xmi:type="uml:Transition" xmi:id="_oEtroKGQEeilSdq-25aCvQ" source="_hieGoKGQEeilSdq-25aCvQ" target="_ik6bEKGQEeilSdq-25aCvQ"/>
                 <transition xmi:type="uml:Transition" xmi:id="_rsRBIKGQEeilSdq-25aCvQ" source="_ik6bEKGQEeilSdq-25aCvQ" target="_j-33oKGQEeilSdq-25aCvQ">
                   <trigger xmi:type="uml:Trigger" xmi:id="_2jQ_4KGQEeilSdq-25aCvQ" name="evPerdidaVelocidad" event="_6t4mMKGQEeilSdq-25aCvQ"/>
                 </transition>
@@ -204,12 +198,9 @@ Desactivar FE</body>
                   </effect>
                   <trigger xmi:type="uml:Trigger" xmi:id="_xbP4AKGiEeilSdq-25aCvQ" event="_DccRwKGREeilSdq-25aCvQ"/>
                 </transition>
+                <transition xmi:type="uml:Transition" xmi:id="_O0kM0KVQEeicPOEdwV6QiA" source="_hieGoKGQEeilSdq-25aCvQ" target="_ik6bEKGQEeilSdq-25aCvQ"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_hieGoKGQEeilSdq-25aCvQ" name="Inicial"/>
-                <subvertex xmi:type="uml:State" xmi:id="_ik6bEKGQEeilSdq-25aCvQ" name="Control Automatico">
-                  <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_qKU20KGcEeilSdq-25aCvQ">
-                    <language>C</language>
-                    <body>Ejecutar algortirmo de control basado en velocidad</body>
-                  </doActivity>
+                <subvertex xmi:type="uml:State" xmi:id="_ik6bEKGQEeilSdq-25aCvQ" name="Control Automatico" submachine="_ZoCFgKVHEeicPOEdwV6QiA">
                   <entry xmi:type="uml:OpaqueBehavior" xmi:id="_LkHC0KGZEeilSdq-25aCvQ">
                     <language>C</language>
                     <body>Prender display velocidad</body>
@@ -219,11 +210,7 @@ Desactivar FE</body>
                     <body>Apagar display velocidad</body>
                   </exit>
                 </subvertex>
-                <subvertex xmi:type="uml:State" xmi:id="_j-33oKGQEeilSdq-25aCvQ" name="Control Intermitente">
-                  <doActivity xmi:type="uml:OpaqueBehavior" xmi:id="_UZe2IKGbEeilSdq-25aCvQ">
-                    <language>C</language>
-                    <body>Ejecutar algoritmo de control intermitente</body>
-                  </doActivity>
+                <subvertex xmi:type="uml:State" xmi:id="_j-33oKGQEeilSdq-25aCvQ" name="Control Intermitente" submachine="_xTX8oKVLEeicPOEdwV6QiA">
                   <entry xmi:type="uml:OpaqueBehavior" xmi:id="__KVCsKGYEeilSdq-25aCvQ">
                     <language>C</language>
                     <body>Prender y Mostrar en display velocidad: &quot;----&quot;</body>
@@ -425,6 +412,128 @@ Prende Led Power</body>
       <packagedElement xmi:type="uml:SignalEvent" xmi:id="_oeNHsKGmEeilSdq-25aCvQ" name="evVelocidadGPS" signal="_oO8jsKGmEeilSdq-25aCvQ"/>
       <packagedElement xmi:type="uml:Signal" xmi:id="_7Vf90KGmEeilSdq-25aCvQ" name="evTimeoutVelocidadGPS"/>
       <packagedElement xmi:type="uml:SignalEvent" xmi:id="_CG_fwKGnEeilSdq-25aCvQ" name="evTimeoutVelocidadGPS" signal="_7Vf90KGmEeilSdq-25aCvQ"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_pQBKMKVLEeicPOEdwV6QiA" name="evTimeoutFrenoEmergencia"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_pgyKEKVLEeicPOEdwV6QiA" name="evTimeoutFrenoEmergencia" signal="_pQBKMKVLEeicPOEdwV6QiA"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_kN6QUKVNEeicPOEdwV6QiA" name="evTimeoutControlIntermitenteTraccionHabilitada"/>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_kdlrEKVNEeicPOEdwV6QiA" name="evTimeoutControlIntermitenteTraccionHabilitada" signal="_kN6QUKVNEeicPOEdwV6QiA"/>
+      <packagedElement xmi:type="uml:Signal" xmi:id="_zsLVIKVNEeicPOEdwV6QiA" name="evTimeoutControlIntermitenteTraccionDeshabilitada">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Fq_1sKVPEeicPOEdwV6QiA" name="TimeoutsDesdeFrenado"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:SignalEvent" xmi:id="_z1aJoKVNEeicPOEdwV6QiA" name="evTimeoutControlIntermitenteTraccionDeshabilitada" signal="_zsLVIKVNEeicPOEdwV6QiA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_ZoCFgKVHEeicPOEdwV6QiA" name="Control Automatico" submachineState="_ik6bEKGQEeilSdq-25aCvQ">
+      <region xmi:type="uml:Region" xmi:id="_a_0-4KVHEeicPOEdwV6QiA" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_mp21sKVKEeicPOEdwV6QiA" source="_uq_QAKVJEeicPOEdwV6QiA" target="_S4ojYKVJEeicPOEdwV6QiA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_pBk7AKVKEeicPOEdwV6QiA" guard="_8miIYKVKEeicPOEdwV6QiA" source="_S4ojYKVJEeicPOEdwV6QiA" target="_jRr1cKVJEeicPOEdwV6QiA">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_8miIYKVKEeicPOEdwV6QiA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_8miIYaVKEeicPOEdwV6QiA">
+              <language>C</language>
+              <body>velocidad >V_CT_on</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_0db6UKVKEeicPOEdwV6QiA" event="_DccRwKGREeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_p5CugKVKEeicPOEdwV6QiA" guard="_UVssYKVLEeicPOEdwV6QiA" source="_jRr1cKVJEeicPOEdwV6QiA" target="_kxzkYKVJEeicPOEdwV6QiA">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_UVssYKVLEeicPOEdwV6QiA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_UVssYaVLEeicPOEdwV6QiA">
+              <language>C</language>
+              <body>velocidad > V_FE</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_OeoLUKVLEeicPOEdwV6QiA" event="_DccRwKGREeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_qiYmcKVKEeicPOEdwV6QiA" guard="_Fo-ZQKVLEeicPOEdwV6QiA" source="_jRr1cKVJEeicPOEdwV6QiA" target="_S4ojYKVJEeicPOEdwV6QiA">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_Fo-ZQKVLEeicPOEdwV6QiA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_Fo-ZQaVLEeicPOEdwV6QiA">
+              <language>C</language>
+              <body>velocidad &lt; V_CT_off</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_-6hkQKVKEeicPOEdwV6QiA" event="_DccRwKGREeilSdq-25aCvQ"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_rqHDgKVKEeicPOEdwV6QiA" source="_kxzkYKVJEeicPOEdwV6QiA" target="_jRr1cKVJEeicPOEdwV6QiA">
+          <trigger xmi:type="uml:Trigger" xmi:id="_p1zX0KVLEeicPOEdwV6QiA" name="evTimeoutFrenoEmergencia" event="_pgyKEKVLEeicPOEdwV6QiA"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_SU6q8KVMEeicPOEdwV6QiA" source="_t-hLkKVJEeicPOEdwV6QiA" target="_uq_QAKVJEeicPOEdwV6QiA"/>
+        <subvertex xmi:type="uml:State" xmi:id="_S4ojYKVJEeicPOEdwV6QiA" name="Traccion habilitada">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_6fy60KVJEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Desactivar CT</body>
+          </entry>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_jRr1cKVJEeicPOEdwV6QiA" name="Traccion deshabilitada">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_AEocYKVKEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Activar CT</body>
+          </entry>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_kxzkYKVJEeicPOEdwV6QiA" name="Freno de emergencia activado">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_DPtRQKVKEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Activar FE</body>
+          </entry>
+          <exit xmi:type="uml:OpaqueBehavior" xmi:id="_HHNHQKVKEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Desactivar FE</body>
+          </exit>
+        </subvertex>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_t-hLkKVJEeicPOEdwV6QiA" name="Inicial"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_uq_QAKVJEeicPOEdwV6QiA" name="Historial" kind="shallowHistory"/>
+      </region>
+    </packagedElement>
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_xTX8oKVLEeicPOEdwV6QiA" name="Control Intermitente" submachineState="_j-33oKGQEeilSdq-25aCvQ _5t9l0KGGEeilSdq-25aCvQ">
+      <region xmi:type="uml:Region" xmi:id="_zxMp8KVLEeicPOEdwV6QiA" name="Region1">
+        <transition xmi:type="uml:Transition" xmi:id="_QXt-cKVMEeicPOEdwV6QiA" source="_LMgd0KVMEeicPOEdwV6QiA" target="_Ms3dUKVMEeicPOEdwV6QiA"/>
+        <transition xmi:type="uml:Transition" xmi:id="_Aqmv4KVNEeicPOEdwV6QiA" source="_T23l4KVMEeicPOEdwV6QiA" target="_cAfYYKVMEeicPOEdwV6QiA">
+          <trigger xmi:type="uml:Trigger" xmi:id="_kqfeoKVNEeicPOEdwV6QiA" name="evTimeoutControlIntermitenteTraccionHabilitada" event="_kdlrEKVNEeicPOEdwV6QiA"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_Choi8KVNEeicPOEdwV6QiA" guard="_cMtvIKVPEeicPOEdwV6QiA" source="_cAfYYKVMEeicPOEdwV6QiA" target="_T23l4KVMEeicPOEdwV6QiA">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_cMtvIKVPEeicPOEdwV6QiA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_cMtvIaVPEeicPOEdwV6QiA">
+              <language>C</language>
+              <body>TimeoutsDesdeFrenado &lt;  C_FE</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_Z0xnYKVPEeicPOEdwV6QiA" event="_z1aJoKVNEeicPOEdwV6QiA"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_Dout4KVNEeicPOEdwV6QiA" guard="_W1QiQKVPEeicPOEdwV6QiA" source="_cAfYYKVMEeicPOEdwV6QiA" target="_j4ku8KVMEeicPOEdwV6QiA">
+          <ownedRule xmi:type="uml:Constraint" xmi:id="_W1QiQKVPEeicPOEdwV6QiA">
+            <specification xmi:type="uml:OpaqueExpression" xmi:id="_W1QiQaVPEeicPOEdwV6QiA">
+              <language>C</language>
+              <body>TimeoutsDesdeFrenado >=  C_FE</body>
+            </specification>
+          </ownedRule>
+          <trigger xmi:type="uml:Trigger" xmi:id="_z9QeEKVNEeicPOEdwV6QiA" name="evTimeoutControlIntermitenteTraccionDeshabilitada" event="_z1aJoKVNEeicPOEdwV6QiA"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_EfmEcKVNEeicPOEdwV6QiA" source="_j4ku8KVMEeicPOEdwV6QiA" target="_T23l4KVMEeicPOEdwV6QiA">
+          <trigger xmi:type="uml:Trigger" xmi:id="_yjEtIKVPEeicPOEdwV6QiA" event="_pgyKEKVLEeicPOEdwV6QiA"/>
+        </transition>
+        <transition xmi:type="uml:Transition" xmi:id="_OH5bcKVNEeicPOEdwV6QiA" source="_Ms3dUKVMEeicPOEdwV6QiA" target="_T23l4KVMEeicPOEdwV6QiA"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_LMgd0KVMEeicPOEdwV6QiA" name="Inicial"/>
+        <subvertex xmi:type="uml:Pseudostate" xmi:id="_Ms3dUKVMEeicPOEdwV6QiA" name="Historial" kind="shallowHistory"/>
+        <subvertex xmi:type="uml:State" xmi:id="_T23l4KVMEeicPOEdwV6QiA" name="Traccion habilitada">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_aSJAMKVMEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Desactivar CT</body>
+          </entry>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_cAfYYKVMEeicPOEdwV6QiA" name="Traccion deshabilitada">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_fZWxoKVMEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Activar CT</body>
+          </entry>
+        </subvertex>
+        <subvertex xmi:type="uml:State" xmi:id="_j4ku8KVMEeicPOEdwV6QiA" name="Freno de emergencia activado">
+          <entry xmi:type="uml:OpaqueBehavior" xmi:id="_yXpnoKVMEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Activar FE</body>
+          </entry>
+          <exit xmi:type="uml:OpaqueBehavior" xmi:id="_1GqyoKVMEeicPOEdwV6QiA">
+            <language>C</language>
+            <body>Desactivar FE</body>
+          </exit>
+        </subvertex>
+      </region>
     </packagedElement>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_52e3YKGAEeilSdq-25aCvQ">
