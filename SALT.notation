@@ -386,7 +386,7 @@
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_SHT8AaGXEeilSdq-25aCvQ" x="-10" y="-10"/>
               </children>
               <element xmi:type="uml:State" href="SALT.uml#_ECoiUKGBEeilSdq-25aCvQ"/>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ECrloaGBEeilSdq-25aCvQ" x="19" y="60" width="141" height="173"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ECrloaGBEeilSdq-25aCvQ" x="39" y="320" width="141" height="173"/>
             </children>
             <children xmi:type="notation:Shape" xmi:id="_U0O3QKGBEeilSdq-25aCvQ" type="Pseudostate_InitialShape">
               <children xmi:type="notation:DecorationNode" xmi:id="_U0O3QqGBEeilSdq-25aCvQ" type="Pseudostate_InitialFloatingNameLabel">
