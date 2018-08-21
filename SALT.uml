@@ -5,7 +5,7 @@
   </packageImport>
   <packagedElement xmi:type="uml:Model" xmi:id="_Xtk1MKF8EeilSdq-25aCvQ" name="Structure"/>
   <packagedElement xmi:type="uml:Model" xmi:id="_dlsfIKF8EeilSdq-25aCvQ" name="Behaviour">
-    <packagedElement xmi:type="uml:StateMachine" xmi:id="_Q0Yv0KF8EeilSdq-25aCvQ" name="SALT">
+    <packagedElement xmi:type="uml:StateMachine" xmi:id="_Q0Yv0KF8EeilSdq-25aCvQ" name="SALT" visibility="public">
       <region xmi:type="uml:Region" xmi:id="_Q0uHAKF8EeilSdq-25aCvQ" name="Region1">
         <transition xmi:type="uml:Transition" xmi:id="_XnV4EKGBEeilSdq-25aCvQ" source="_U0LM4KGBEeilSdq-25aCvQ" target="_ECoiUKGBEeilSdq-25aCvQ"/>
         <transition xmi:type="uml:Transition" xmi:id="_dmbFoKGBEeilSdq-25aCvQ" guard="_xxyWQKGCEeilSdq-25aCvQ" source="_ECoiUKGBEeilSdq-25aCvQ" target="_1jy6MKGAEeilSdq-25aCvQ">
