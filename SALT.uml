@@ -105,7 +105,7 @@ Apagar Led CT y FE</body>
                   <ownedRule xmi:type="uml:Constraint" xmi:id="_VHC10KGSEeilSdq-25aCvQ">
                     <specification xmi:type="uml:OpaqueExpression" xmi:id="_VHC10aGSEeilSdq-25aCvQ">
                       <language>C</language>
-                      <body>comando modo intermitente</body>
+                      <body>comando = modo intermitente</body>
                     </specification>
                   </ownedRule>
                 </transition>
@@ -113,7 +113,7 @@ Apagar Led CT y FE</body>
                   <ownedRule xmi:type="uml:Constraint" xmi:id="_QbcpYKGSEeilSdq-25aCvQ">
                     <specification xmi:type="uml:OpaqueExpression" xmi:id="_QbcpYaGSEeilSdq-25aCvQ">
                       <language>C</language>
-                      <body>comando coche a la deriva</body>
+                      <body>comando = coche a la deriva</body>
                     </specification>
                   </ownedRule>
                 </transition>
@@ -121,7 +121,7 @@ Apagar Led CT y FE</body>
                   <ownedRule xmi:type="uml:Constraint" xmi:id="__-9o0KGREeilSdq-25aCvQ">
                     <specification xmi:type="uml:OpaqueExpression" xmi:id="__-9o0aGREeilSdq-25aCvQ">
                       <language>C</language>
-                      <body>comando parada total</body>
+                      <body>comando = parada total</body>
                     </specification>
                   </ownedRule>
                 </transition>
@@ -132,7 +132,7 @@ Apagar Led CT y FE</body>
                   <ownedRule xmi:type="uml:Constraint" xmi:id="_bvdUQKGSEeilSdq-25aCvQ">
                     <specification xmi:type="uml:OpaqueExpression" xmi:id="_bvdUQaGSEeilSdq-25aCvQ">
                       <language>C</language>
-                      <body>comando modo aislado total</body>
+                      <body>comando = modo aislado total</body>
                     </specification>
                   </ownedRule>
                 </transition>
@@ -253,7 +253,7 @@ Desactivar FE</body>
           <entry xmi:type="uml:OpaqueBehavior" xmi:id="_SHDdUKGXEeilSdq-25aCvQ">
             <language>C</language>
             <body>Apagar display velocidad, Led AL, Led CT, Led FE, Led Op. Rem. y Buzzer&#xD;
-Prende Led Power</body>
+Prende Led Power 4564564</body>
           </entry>
         </subvertex>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_U0LM4KGBEeilSdq-25aCvQ" name="Inicial"/>
