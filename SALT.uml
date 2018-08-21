@@ -253,7 +253,7 @@ Desactivar FE</body>
           <entry xmi:type="uml:OpaqueBehavior" xmi:id="_SHDdUKGXEeilSdq-25aCvQ">
             <language>C</language>
             <body>Apagar display velocidad, Led AL, Led CT, Led FE, Led Op. Rem. y Buzzer&#xD;
-Prende Led Power 4564564</body>
+Prende Led Power</body>
           </entry>
         </subvertex>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_U0LM4KGBEeilSdq-25aCvQ" name="Inicial"/>
