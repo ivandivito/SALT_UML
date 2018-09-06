@@ -30,12 +30,14 @@
           <entry xmi:type="uml:OpaqueBehavior" xmi:id="_MVow8KGaEeilSdq-25aCvQ">
             <language>C</language>
             <body>Activar receptor de comandos GPRS&#xD;
-Prender Led CT yFE</body>
+Prender Led CT yFE&#xD;
+Buzzer emite sonido intermitente</body>
           </entry>
           <exit xmi:type="uml:OpaqueBehavior" xmi:id="_O5migKGaEeilSdq-25aCvQ">
             <language>C</language>
             <body>Desactivar receptor de comandos GPRS&#xD;
-Apagar Led CT y FE</body>
+Apagar Led CT y FE&#xD;
+Buzzer apagado</body>
           </exit>
           <region xmi:type="uml:Region" xmi:id="__UCsQqGAEeilSdq-25aCvQ" name="Region1">
             <transition xmi:type="uml:Transition" xmi:id="_E7ltIKGNEeilSdq-25aCvQ" source="_vsfoQKGDEeilSdq-25aCvQ" target="__8k1cKGMEeilSdq-25aCvQ"/>
@@ -170,7 +172,7 @@ Desactivar FE</body>
                     <body>Desactivar CT y FE</body>
                   </entry>
                 </subvertex>
-                <subvertex xmi:type="uml:State" xmi:id="_5t9l0KGGEeilSdq-25aCvQ" name="Intermitente" submachine="_xTX8oKVLEeicPOEdwV6QiA"/>
+                <subvertex xmi:type="uml:State" xmi:id="_5t9l0KGGEeilSdq-25aCvQ" name="Control Intermitente" submachine="_xTX8oKVLEeicPOEdwV6QiA"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_YV9eUKGREeilSdq-25aCvQ" name="Inicial"/>
                 <subvertex xmi:type="uml:Pseudostate" xmi:id="_gGgCcKGREeilSdq-25aCvQ" name="C3" kind="choice"/>
               </region>
@@ -240,7 +242,8 @@ Desactivar FE</body>
           <entry xmi:type="uml:OpaqueBehavior" xmi:id="_SHDdUKGXEeilSdq-25aCvQ">
             <language>C</language>
             <body>Apagar display velocidad, Led AL, Led CT, Led FE, Led Op. Rem. y Buzzer&#xD;
-Prende Led Power</body>
+Prende Led Power&#xD;
+Buzzer Apagado</body>
           </entry>
         </subvertex>
         <subvertex xmi:type="uml:Pseudostate" xmi:id="_U0LM4KGBEeilSdq-25aCvQ" name="Inicial"/>
@@ -458,13 +461,15 @@ Prende Led Power</body>
         <subvertex xmi:type="uml:State" xmi:id="_S4ojYKVJEeicPOEdwV6QiA" name="Traccion habilitada">
           <entry xmi:type="uml:OpaqueBehavior" xmi:id="_6fy60KVJEeicPOEdwV6QiA">
             <language>C</language>
-            <body>Desactivar CT</body>
+            <body>Desactivar CT&#xD;
+Buzzer intermitente</body>
           </entry>
         </subvertex>
         <subvertex xmi:type="uml:State" xmi:id="_jRr1cKVJEeicPOEdwV6QiA" name="Traccion deshabilitada">
           <entry xmi:type="uml:OpaqueBehavior" xmi:id="_AEocYKVKEeicPOEdwV6QiA">
             <language>C</language>
-            <body>Activar CT</body>
+            <body>Activar CT&#xD;
+Buzzer permanente</body>
           </entry>
         </subvertex>
         <subvertex xmi:type="uml:State" xmi:id="_kxzkYKVJEeicPOEdwV6QiA" name="Freno de emergencia activado">
